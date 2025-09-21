@@ -1,2 +1,33 @@
-### Reference
-https://www.youtube.com/watch?v=tcqEUSNCn8I 
+# 🪙 BTC Explainer
+
+This project indexes Bitcoin-related documents into a [Chroma](https://docs.trychroma.com/) vector database and allows you to query them using [LangChain](https://www.langchain.com/) + [OpenAI](https://platform.openai.com/).
+
+It’s designed to explain cryptocurrency concepts to beginners in **simple language**, grounded only in Bitcoin's Whitepaper.
+
+---
+
+## ⚙️ Setup
+
+⚙️ Setup
+1. *Clone the repo*
+2. *Create and activate a virtual environment*
+python3 -m venv .venv
+source .venv/bin/activate
+3. *Install dependencies*
+pip install -r requirements.txt
+4. *add openai api key locally (if you have not done so)*
+export OPENAI_API_KEY="sk-your-key-here" source ~/.zshrc
+5. *Create database (On terminal)*
+mac: python3 create_database.py
+windows: python create_database.py
+6. *Query the database (On terminal)*
+mac: python3 query_data.py "What is bitcoin?"
+windows: python3 query_data.py "What is bitcoin?"
+
+
+Example questions you can try!
+"What is Bitcoin?"
+"Who created Bitcoin?"
+"When was the Bitcoin whitepaper published?"
+"What problems does Bitcoin try to solve?"
+"Why would someone use Bitcoin instead of a bank?"

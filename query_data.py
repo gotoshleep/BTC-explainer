@@ -8,13 +8,20 @@ from langchain.prompts import ChatPromptTemplate
 CHROMA_PATH = "chroma"
 
 PROMPT_TEMPLATE = """
-Answer the question based only on the following context:
+You are a knowledgeable assistant explaining to an audience who do not know anything about cryptocurrency. 
+Do NOT use difficult terminology to explain. 
+Use ONLY the context below to answer the question. 
+If the answer is not in the context, say "I don’t know."
 
+Context:
 {context}
 
----
+Question:
+{question}
 
-Answer the question based on the above context: {question}
+Answer in 2 parts:
+1. **Answer** – a clear and concise response.
+2. **Evidence** – quote or summarize supporting context.
 """
 
 
