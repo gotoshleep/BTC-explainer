@@ -18,7 +18,7 @@ load_dotenv()
 openai.api_key = os.environ['OPENAI_API_KEY']
 
 CHROMA_PATH = "chroma"
-DATA_PATH = "data/bitcoin.md"
+DATA_PATH = "data/"
 
 
 def main():
@@ -71,5 +71,3 @@ if __name__ == "__main__":
     main()
 
 
-
-print(DATA_PATH)
