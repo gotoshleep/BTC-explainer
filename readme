@@ -1,4 +1,4 @@
-# 🪙 BTC Explainer
+#🪙 BTC Explainer
 
 This project indexes Bitcoin-related documents into a [Chroma](https://docs.trychroma.com/) vector database and allows you to query them using [LangChain](https://www.langchain.com/) + [OpenAI](https://platform.openai.com/).
 
@@ -6,7 +6,7 @@ It’s designed to explain cryptocurrency concepts to beginners in **simple lang
 
 ---
 
-## ⚙️ Setup
+##⚙️ Setup
 
 ⚙️ Setup
 1. *Clone the repo*
