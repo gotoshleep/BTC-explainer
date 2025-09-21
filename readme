@@ -1,4 +1,4 @@
-#🪙 BTC Explainer
+# 🪙 BTC Explainer
 
 This project indexes Bitcoin-related documents into a [Chroma](https://docs.trychroma.com/) vector database and allows you to query them using [LangChain](https://www.langchain.com/) + [OpenAI](https://platform.openai.com/).
 
@@ -6,28 +6,49 @@ It’s designed to explain cryptocurrency concepts to beginners in **simple lang
 
 ---
 
-##⚙️ Setup
-
-⚙️ Setup
+## ⚙️ Setup
 1. *Clone the repo*
 2. *Create and activate a virtual environment*
-python3 -m venv .venv
-source .venv/bin/activate
+```python3 -m venv .venv
+    source .venv/bin/activate
+```
 3. *Install dependencies*
+```
 pip install -r requirements.txt
+```
 4. *add openai api key locally (if you have not done so)*
+```
 export OPENAI_API_KEY="sk-your-key-here" source ~/.zshrc
+```
 5. *Create database (On terminal)*
-mac: python3 create_database.py
-windows: python create_database.py
+``` 
+python3 create_database.py
+```
 6. *Query the database (On terminal)*
-mac: python3 query_data.py "What is bitcoin?"
-windows: python3 query_data.py "What is bitcoin?"
+```
+python3 query_data.py "What is bitcoin?"
+```
 
-
+# Example Questions
 Example questions you can try!
-"What is Bitcoin?"
-"Who created Bitcoin?"
-"When was the Bitcoin whitepaper published?"
-"What problems does Bitcoin try to solve?"
-"Why would someone use Bitcoin instead of a bank?"
+1. "What is Bitcoin?"
+2. "Who created Bitcoin?"
+3. "When was the Bitcoin whitepaper published?"
+4. "What problems does Bitcoin try to solve?"
+5. "Why would someone use Bitcoin instead of a bank?"
+
+# Guiding prompt
+You are a knowledgeable assistant explaining to an audience who do not know anything about cryptocurrency. 
+Do NOT use difficult terminology to explain. 
+Use ONLY the context below to answer the question. 
+If the answer is not in the context, say "I don’t know."
+
+Context:
+{context}
+
+Question:
+{question}
+
+Answer in 2 parts:
+1. **Answer** – a clear and concise response.
+2. **Evidence** – quote or summarize supporting context.
