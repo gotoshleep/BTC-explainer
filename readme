@@ -9,24 +9,24 @@ It’s designed to explain cryptocurrency concepts to beginners in **simple lang
 ## ⚙️ Setup
 1. *Clone the repo*
 2. *Create and activate a virtual environment*
-```
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 3. *Install dependencies*
-```
+```bash
 pip install -r requirements.txt
 ```
 4. *add openai api key locally (if you have not done so)*
-```
+```bash
 export OPENAI_API_KEY="sk-your-key-here" source ~/.zshrc
 ```
 5. *Create database (On terminal)*
-``` 
+``` bash
 python3 create_database.py
 ```
 6. *Query the database (On terminal)*
-```
+```bash
 python3 query_data.py "What is bitcoin?"
 ```
 
